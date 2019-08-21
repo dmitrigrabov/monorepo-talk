@@ -1,0 +1,4 @@
+[ ] - Fix lerna logo
+[ ] - yarn lerna comparison
+[ ] - webpack vs rollup
+[ ] - 

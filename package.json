@@ -1,0 +1,12 @@
+{
+  "name": "monorepo-talk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "mdx-deck": "^3.0.9"
+  },
+  "scripts": {
+    "start": "mdx-deck src/index.mdx"
+  }
+}

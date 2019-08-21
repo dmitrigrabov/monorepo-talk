@@ -1,0 +1,276 @@
+import { Image, Appear } from "mdx-deck";
+
+# Using monorepos to supercharge development
+
+---
+
+# My name is Dmitri
+
+---
+
+# 11:FS Foundry
+
+Banking software as a service
+
+---
+
+<Image src="https://www.ginasoden.co.uk/wp-content/uploads/2016/06/battersea.jpg" />
+
+<Notes>
+
+- Complex ui
+- Tell story of how interest rates are set in a bank
+- Many apps in future with many components
+- Code reuse
+
+</Notes>
+
+---
+
+# Code reuse
+
+<ul>
+  <Appear>
+    <li>Best code is code you don't have to write</li>
+  </Appear>
+</ul>
+
+<Notes>
+
+- It just works
+- Allows you to focus on specifics of your own app
+
+</Notes>
+
+---
+
+<Image src="https://i2.wp.com/wp.laravel-news.com/wp-content/uploads/2018/01/bootstrap-4.jpg?resize=2200%2C1125" />
+
+<Notes>
+
+- Who has never heard of it?
+- 2011
+
+</Notes>
+
+---
+
+# Bootstrap
+
+<div style="display:flex">
+  <div style="flex:1">
+    <h3>Good 🎉</h3>
+    <Appear>
+      <li>Common ui elements</li>
+      <li>Looks decent</li>
+      <li>Unblocks development</li>
+      <li>Documentation</li>
+    </Appear>
+  </div>
+  <div style="flex:1">
+    <h3>Less good 👎</h3>
+    <Appear>
+      <li>Difficult to restyle</li>
+      <li>JQuery</li>
+      <li>Not very extensible</li>
+    </Appear>
+  </div>
+</div>
+
+<Notes>
+
+- What if we could take the good parts and remove the bad?
+
+</Notes>
+
+---
+
+# Component library
+
+<Image src="https://i.guim.co.uk/img/media/23c6cd9d164308693b975f72e6316e67252ff923/0_255_7660_4595/master/7660.jpg?width=1140&quality=45&auto=format&fit=max&dpr=2&s=1aca1653af25f87c45c80c05b1ef083f" />
+
+---
+
+<ul>
+  <li>
+    <del>Difficult to restyle</del> Use shared style ✅
+  </li>
+  <Appear>
+    <li>
+      <del>JQuery</del> Same libraries as your app ✅
+    </li>
+    <li>
+      <del>Limited</del> Build and configure own components ✅
+    </li>
+
+  </Appear>
+</ul>
+
+<Notes>
+
+- Sounds simple, right?
+
+</Notes>
+
+---
+
+# Story time
+
+<Notes>
+
+- Enforce standards
+- Speed up development
+- Devs copy pasted code
+- Too difficult to contribute
+- Merging copy pasted code back was too hard
+- Bad jobs are a great way of learning what not to do
+
+</Notes>
+
+---
+
+# What did we learn?
+
+<ul>
+  <Appear>
+    <li>Developers will only use a library if it makes life easier</li>
+    <li>Component libraries need to support organic growth</li>
+  </Appear>
+</ul>
+
+<Notes>
+
+- You can't force developers to use crap tools
+- It must be easy to contribute to the library
+- Independently versioned components to prevent forced upgrades
+- Avoid constant rewrites to incorporate potentially breaking changes
+- How do monorepos help us?
+
+</Notes>
+
+---
+
+# Monorepos?
+
+<ul>
+  <Appear>
+    <li>Single repository, many projects</li>
+    <li>Not a monolith</li>
+  </Appear>
+</ul>
+
+<Notes>
+
+- Who has heard of monorepos before?
+- Who is using them at the moment?
+
+</Notes>
+
+---
+
+# How do monorepos help?
+
+<ul>
+  <Appear>
+    <li>Linked dependencies</li>
+    <li>Atomic commits</li>
+    <li>Streamlined workflow</li>
+    <li>Shared config</li>
+    <li>CI build support</li>
+  </Appear>
+</ul>
+
+<Notes>
+
+- Linked dependencies
+- Atomic commits - semantic
+- Streamlined workflow - single pull request approval
+- Shared config
+- CI build support
+
+</Notes>
+
+---
+
+# Folder structure
+
+```
+/ root
+    / node_modules
+    package.json
+    lerna.json
+    / packages
+        / button
+            / src
+            package.json
+
+        / dialog
+            / src
+            package.json
+
+        / chart
+            / src
+            package.json
+```
+
+---
+
+# Monorepo tools
+
+<Image src="https://images.unsplash.com/photo-1501360575895-3f3f2639fd74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2534&q=80" />
+
+---
+
+<Image src="https://i.ytimg.com/vi/G8KXFWftCg0/maxresdefault.jpg" />
+
+---
+
+- dependency linking
+- single node_modules
+- execute scripts
+
+---
+
+<Image src="https://www.itcapsula.com/wp-content/uploads/2019/01/lerna2.jpg" />
+
+---
+
+- dependency linking
+- single node_modules
+- execute scripts
+
+---
+
+- Yarn workspaces is better at dependency management
+- Lerna is better at execution
+
+---
+
+Rollup
+
+---
+
+npm
+
+---
+
+Explain workflow
+
+---
+
+# Evaluation
+
+- The bits that work are great
+- The bits that don't are a massive pain
+- This is the future
+
+<Notes>
+  - Feels like React prior to create-react-app - Cost to combining so many tools
+  - You learn a lot
+</Notes>
+
+---
+
+# Thank you
+
+@dmitrigrabov
